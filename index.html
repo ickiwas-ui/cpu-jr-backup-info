@@ -2,18 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CPU Jr. Backup is a personal application that stores encrypted Raspberry Pi system backups in Google Drive.">
   <title>CPU Jr. Backup</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>CPU Jr. Backup</h1>
-  <p>CPU Jr. Backup is a personal backup
-  application using Rclone and Restic
-  to store encrypted Raspberry Pi
-  system backups in Google Drive.</p>
-  <p>Google Drive access is used only
-  to create, manage, and restore
-  backup files.</p>
-  <p><a href="privacy.html">
-  Privacy Policy</a></p>
+  <main>
+    <h1>CPU Jr. Backup</h1>
+
+    <p>CPU Jr. Backup is a personal backup application that uses
+      <a href="https://rclone.org/">Rclone</a> and
+      <a href="https://restic.net/">Restic</a> to store encrypted
+      Raspberry Pi system backups in Google Drive.</p>
+
+    <h2>How it works</h2>
+    <ul>
+      <li>Restic creates backup snapshots of the Raspberry Pi and encrypts them on the device before anything is uploaded.</li>
+      <li>Rclone transfers the encrypted backup files to the owner's own Google Drive account.</li>
+      <li>Backups can be listed, pruned, and restored from the Raspberry Pi.</li>
+    </ul>
+
+    <h2>Use of Google Drive</h2>
+    <p>Google Drive access is used only to create, manage, retrieve, and delete
+      the application's backup files.</p>
+
+    <p><a href="privacy.html">Privacy Policy</a></p>
+  </main>
+
+  <footer>
+    <p>CPU Jr. Backup &middot; <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
 </body>
 </html>
